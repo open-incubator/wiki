@@ -1,3 +1,4 @@
 baseURL = "https://wiki.openincubator.tech"
 languageCode = "fr-fr"
 title = "Open:Ressources"
+theme = "book"
