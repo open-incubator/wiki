@@ -3,7 +3,7 @@ web:
   volumes:
     - ./public:/var/www
   ports:
-    - 5000:80docker run --rm -p 1313:1313 -v $(pwd):/root/hugo krolow/gohugo serve --bind=0.0.0.0
+    - 5000:80
   labels: 
     - traefik.frontend.rule=Host:wiki.openincubator.tech
   restart: always
