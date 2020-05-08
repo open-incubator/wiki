@@ -44,7 +44,7 @@ Il y a deux méthodes pour faire ceci:
 
 * Autrement (si ssh est configuré) : `git clone git@serveur:/nom-d-utilisateur/nom-du-depot`
 
-# Arbres
+## Arbres
 
 *Un arbre (tree) Git est une forme de répertoire. Il va référencer une liste de trees et de blobs (sous-répertoires et fichiers) [Source](https://openclassrooms.com/fr/courses/5641721-utilisez-git-et-github-pour-vos-projets-de-developpement/6113071-identifiez-la-structure-de-fichier-de-git)*
 
