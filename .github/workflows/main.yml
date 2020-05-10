@@ -1,25 +1,25 @@
-# This is a basic workflow to help you get started with Actions
+name: Build Site
 
-name: Github Pages
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/hugo-build-action@master
-      with:
-        args: --minify --buildDrafts
-    - uses: actions/upload-artifact@master
-      with:
-        name: website
-        path: './public'
-        echo test, and deploy your project.
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Build Site
+        uses: chabad360/hugo-actions@master
+      - name: Publish Site
+        uses: chabad360/hugo-actions@master
+        with:
+          buildPath: 'public'
+          # Use if you have a need to build the site to another directory
+          args: --gc --minify --cleanDestinationDir -D
+          # Use if you want to pass some custom arguments to Hugo        
