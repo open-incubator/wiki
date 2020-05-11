@@ -19,8 +19,7 @@ jobs:
       - name: Publish Site
         uses: chabad360/hugo-actions@master
         with:
-          buildPath: 'public'
           # Use if you have a need to build the site to another directory
           hugoVersion: 'extended_0.68.3'
-          args: -D --minify
+          args: --minify
           # Use if you want to pass some custom arguments to Hugo        
