@@ -20,7 +20,7 @@ jobs:
         with:
           # Use if you have a need to build the site to another directory
           hugoVersion: 'extended_0.68.3'
-          args: --minify --baseUrl https://open-incubator.github.io/wiki
+          args: --minify --baseUrl https://wiki.openincubator.tech
           # Use if you want to pass some custom arguments to Hugo  
       - name: Publish 
         uses: JamesIves/github-pages-deploy-action@releases/v3
