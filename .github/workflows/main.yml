@@ -9,15 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/hugo-build-action@master
-      with:
-        args: --minify --buildDrafts
-    - uses: actions/upload-artifact@master
-      with:
-        name: website
-        path: './public'
-    - uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: public # The folder the action should deploy:  
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Build Site
+        uses: chabad360/hugo-actions@master
+      - name: Publish Site
+        uses: chabad360/hugo-actions@master
+        with:
+          # Use if you have a need to build the site to another directory
+          hugoVersion: 'extended_0.68.3'
+          args: --minify
+          # Use if you want to pass some custom arguments to Hugo  
+      - name: Publish 
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+           BRANCH: gh-pages # The branch the action should deploy to.
+           FOLDER: public # The folder the action should deploy:  
