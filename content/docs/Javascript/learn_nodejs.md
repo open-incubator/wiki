@@ -26,6 +26,9 @@ Node.js a un avantage unique car des milions de développeurs frontend qui écri
 
 En utilisant Node.js, les nouveaux standards ECMAScript peuvent être utilisés sans problème car vous n'avez pas besoin d'attendre que tout vos utilisateurs mette à jour leurs navigateurs. Vous décidez alors quelle version de ECMAScript vous souhaitez utiliser en changeant de version de Node.js, et vous pouvez aussi activez des fonctionnalités expérimentales en lançant Node.js avec des drapeaux *("flags" en anglais)*.
 
+## Installation
+
+Rendez-vous sur [la page de téléchargement](https://nodejs.org/fr/download/).
 ## Example d'application Node.js
 
 ```js
