@@ -164,4 +164,94 @@ npm update <nom-du-paquet>
 
 *En remplaçant nom-du-paquet par le nom du paquet voulu.*
 
-## Serveur HTTP
+### Lancer des tâches
+
+Le fichier `package.json` supporte un format pour spécifier des tâches en ligne de commande qui peuvent être lancées en utilisant la commande :
+
+```bash
+npm run <nom-de-la-tâche>
+```
+
+*En remplaçant nom-de-la-tâche par le nom de la tâche spécifiée dans le fichier `package.json`.*
+
+Par example :
+
+```json
+{
+	"scripts": {
+		"start": "node app.js"
+	}
+}
+```
+
+## Lire et écrire des fichiers
+
+### Lire un fichier
+
+La manière la plus simple de lire un fichier avec Node.js est d'utiliser la méthode [`fs.readFile()`](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback), en lui passant en paramètre le chemin du fichier et la fonction qui sera appelée avec les données du fichier (et l'erreur si il y en a une) :
+
+```js
+// Inclus le module 'fs' afin de pouvoir l'utiliser en utilisant l'objet fs
+const fs = require('fs')
+
+// Lis le fichier de manière asynchrone et exécute la fonction à appeler avec les données et une erreur si il y en à une
+fs.readFile('/Users/joe/test.txt', (err, data) => {
+	// Traitement de l'erreur si il y en à une
+  if (err) {
+    console.error(err)
+    return
+  }
+
+	// Affiche le contenu du fichier dans la console
+  console.log(data)
+})
+```
+
+### Écrire dans un fichier
+
+La manière la plus sumple d'écrire des fichiers avec Node.js est d'utiliser l'API [`fs.writeFile()`](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback) en lui passant en paramètre le chemin du fichier et le contenu à insérer dedans : 
+
+```js
+// Inclus le module 'fs' afin de pouvoir l'utiliser en utilisant l'objet fs
+const fs = require('fs')
+
+const content = 'Un peu de contenu !'
+
+fs.writeFile('/Users/joe/test.txt', content, err => {
+	// Traitement de l'erreur si il y en à une
+  if (err) {
+    console.error(err)
+    return
+  }
+
+  // Le contenu à été inséré sans erreur dans le fichier
+})
+```
+
+Si vous souhaitez insérer le contenu à la fin du fichier, vous pouvez utiliser la méthode [`fs.appendFile()`](https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback) en lui passanten paramètre le chemin du fichier et le contenu à insérer dedans :
+
+```js
+const content = 'Un peu de contenu !'
+
+fs.appendFile('file.log', content, err => {
+	// Traitement de l'erreur si il y en à une
+	if (err) {
+		console.log(err)
+		return
+	}
+
+ // Le contenu à été inséré sans erreur dans le fichier
+})
+```
+
+## Accéder à une variable d'environnement
+
+Le module `process` de Node.js apporte un propriété `env` qui héberge toutes les variables d'environnement qui étaient assignées au moment ou le processus a été lançé *(lorsque vous avez exécuté la comande `node <fichier>`)*.
+
+Voilà un example qui accède à la variable d'environnement NODE_ENV, qui est assignée à `development` par défaut
+
+> `process` n'a pas besoin d'un require, il est automatiquement disponible.
+
+```js
+proccess.env.NODE_ENV // "development"
+```
