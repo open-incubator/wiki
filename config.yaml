@@ -5,3 +5,5 @@ theme: book
 
 params:
   BookMenuBundle: /menu
+  BookRepo: https://github.com/open-incubator/wiki
+  BookEditPath:  edit/master/content

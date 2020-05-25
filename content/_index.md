@@ -8,4 +8,4 @@ draft: false
 **Open**:*Incubator* et ses membres ont le plaisir de partager leurs connaissances et leur savoir à travers les divers tutoriels de ce site. 👋
 
 *Les tutoriels et guides présents sur ce site sont tous publiés sous licence libre.*
-*Si vous souhaitez contribuer en ajoutant un tutoriel/guide ou en en modifiant un afin d'ajouter des choses ou de corriger des potentielles erreurs, le dêpot est [ici](https://git.openincubator.tech/open-incubator/wiki).*
+*Si vous souhaitez contribuer en ajoutant un tutoriel/guide ou en en modifiant un afin d'ajouter des choses ou de corriger des potentielles erreurs, le dêpot est [ici](https://github.com/open-incubator/wiki).*
