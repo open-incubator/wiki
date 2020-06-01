@@ -10,3 +10,6 @@ headless = true
 	- [Apprendre à utiliser NodeJS]({{< relref "/docs/Javascript/learn_nodejs" >}})
 	- [Mise en pratique de NodeJS]({{< relref  "/docs/Javascript/practice_nodejs.md" >}})
 	- [Apprendre le Typescript]({{< relref "/docs/Javascript/learn_typescript.md" >}})
+- **[Serveur]()**
+  - [Introduction]({{< relref "/docs/Serveur/introduction.md" >}})
+  - [Installer Debian](https://lecrabeinfo.net/installer-linux-debian-le-guide-complet.html)
