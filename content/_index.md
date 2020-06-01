@@ -5,6 +5,8 @@ draft: false
 ---
 ![Open:Incubator](/images/openincubator.png)
 
+## Présentation
+
 **Open**:*Incubator* et ses membres ont le plaisir de partager leurs connaissances et leur savoir à travers les divers tutoriels de ce site. 👋
 
 *Les tutoriels et guides rédigés par les membres d'Open:Incubator sur ce site sont tous publiés sous licence libre.*

@@ -44,7 +44,7 @@ Pour installer Debian sur une machine virtuelle vous pouvez suivre [ce lien](htt
 
 * Installer un serveur web
 * Configurer votre serveur web pour PHP
-* Configurer votre serveur web pour NodeJS/Python/Serverless
+* Configurer votre serveur web pour NodeJS
 * Sécuriser votre serveur
 * Utiliser docker et docker-compose
 
