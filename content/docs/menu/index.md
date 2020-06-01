@@ -17,4 +17,4 @@ headless = true
   - [Configurer un serveur web pour PHP]({{< relref "docs/Serveur/webserver_configure_php.md" >}})
   - [Configurer un serveur web pour NodeJS]({{< relref "docs/Serveur/webserver_configure_serverless.md" >}})
   - [Sécuriser un serveur](/docs/serveur/webserver_secure)
-  - [Apprendre à utiliser Docker]({{< relref "docs/Serveur/learn_docker.md" >}})
+  - [Apprendre à utiliser Docker](docs/serveur/learn_docker.md)
